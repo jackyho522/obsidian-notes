@@ -1,7 +1,7 @@
 # whoami
 - The blog is still updating
 
-I'm Ho Chak Lam, an Offensive Security Certified Professional (OSCP). I love to research on Offensive Security and SIEM. My area of expertise involves Web Application, and Network Security. At present, I'm working in SOC. I'm an avid learner in the field of Information Security for more than 3 years now.
+I'm Ho Chak Lam, an Offensive Security Certified Professional (OSCP). I love to research on Offensive Security and SIEM. My areas of expertise involve Web Application and Network Security. At present, I'm working in Security Operation Center. I'm an avid learner in the field of Information Security for more than 3 years now.
 
 Let me share my research related to Information Security in this blog. Here are some channels that may be helpful for OSCP learners.
 
