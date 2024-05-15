@@ -434,7 +434,8 @@ powershell -c Get-Content -stream flag.txt root.txt
 ```
 <br/>
 Linux:<br/>
-```
+
+```bash
 cd /root
 hostname && whoami && cat /root/proof.txt && ip a
 ```
