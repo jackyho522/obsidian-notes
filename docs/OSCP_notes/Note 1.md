@@ -67,9 +67,6 @@ nc -vn <IP> Port
 	- (FPC) Full Page Cache<br/>
 - Port 3389 - RDP<br/>
 	- graphical interface connection between computers over a network.<br/>
-- Port 2049 - NFS service <br/>
-	- **NFS** is a system designed for **client/server** that enables users to seamlessly access files over a network as though these files were located within a local directory.<br/>
-
 
 ## Initial Scan
 nmap -sC -sV -oA nmap/initial (ip address) <br/>
