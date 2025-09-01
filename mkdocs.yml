@@ -1,17 +1,5 @@
 site_name: Jacky's Blog
 site_author: Jacky
-site_url: https://jackyho522.github.io/obsidian-notes/
-nav:
-    - Introduction: index.md
-    - OSCP notes:
-        - Note 1: OSCP_notes/Note 1.md
-        - Note 2: OSCP_notes/Note 2.md
-    - Splunk notes:
-        - Note 1: Splunk_notes/Note 1.md
-    - Projects:
-        - LaTeX Math Support: Projects/LaTeX Math Support.md
-        - Mermaid diagrams: Projects/Mermaid Diagrams.md
-        - Text Formatting: Projects/Text Formatting.md
         
 theme:
     name: 'material'
