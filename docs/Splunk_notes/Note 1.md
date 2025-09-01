@@ -46,7 +46,7 @@ h. Show alert list in query?
 grep alert config
 find . -name savedsearches.conf -exec grep -iH "Basic" {} \;
 find . -name savedsearches.conf
- ```
+```
 https://community.splunk.com/t5/Alerting/How-can-I-query-to-get-all-alerts-which-are-configured/m-p/288845
 ```
 i. Check License usage (real time usage ONLY)?
