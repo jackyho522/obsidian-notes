@@ -12,10 +12,6 @@ tags:
 
 
 # Hello World Blogpost
+Testtesttest
 
-Blog excerpt here
-
-<!-- more -->
-
-Rest of blog here
 ...
