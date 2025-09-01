@@ -3,7 +3,6 @@
 [Hacktricks](https://book.hacktricks.xyz/) <br/>
 [GTFOBins](https://gtfobins.github.io/) <br/>
 [WADComs](https://wadcoms.github.io/) <br/>
-testtesttesttest
 
 ## Easy win 
 nmap scan <br/>
