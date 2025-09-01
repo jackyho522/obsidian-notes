@@ -1,5 +1,13 @@
 site_name: Jacky's Blog
-
+site_author: Jacky
+site_url: https://jackyho522.github.io/obsidian-notes/
+nav:
+    - Introduction: index.md
+    - OSCP notes:
+        - Note 1: OSCP_notes/Note 1.md
+        - Note 2: OSCP_notes/Note 2.md
+    - Splunk notes:
+        - Note 1: Splunk_notes/Note 1.md
 theme:
     name: 'material'
     palette:
