@@ -12,7 +12,6 @@ nav:
         - LaTeX Math Support: Projects/LaTeX Math Support.md
         - Mermaid diagrams: Projects/Mermaid Diagrams.md
         - Text Formatting: Projects/Text Formatting.md
-    - Blog:
         
 theme:
     name: 'material'
