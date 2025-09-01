@@ -10,10 +10,9 @@ nav:
         - Note 1: Splunk_notes/Note 1.md
     - Projects:
         - LaTeX Math Support: Projects/LaTeX Math Support.md
-        - Mermaid diagrams: Projects/Mermaid diagrams.md
+        - Mermaid diagrams: Projects/Mermaid Diagrams.md
         - Text Formatting: Projects/Text Formatting.md
     - Blog:
-        - Posts: blog/posts/hello-world.md
         
 theme:
     name: 'material'
