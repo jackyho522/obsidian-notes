@@ -51,8 +51,8 @@ https://community.splunk.com/t5/Alerting/How-can-I-query-to-get-all-alerts-which
 ```
 i. Check License usage (real time usage ONLY)?
 index=_internal source=*license_usage.log type="Usage"    | eval indexname = if(len(idx)=0 OR isnull(idx),"(UNKNOWN)",idx) | eval sourcetypename = st | bin _time span=1d | stats values(poolsz) as poolsz sum(b) as b by _time, pool, indexname, sourcetypename | eval GB=(b/1024/1024/1024) | eval pool=(poolsz/1024/1024/1024) | fields _time, indexname, sourcetypename, GB, pool
-#| stats sum(GB) by indexname, _time
-#| eval license_usage_percentage = (GB_used / 250) * 100
+| stats sum(GB) by indexname, _time
+| eval license_usage_percentage = (GB_used / 250) * 100
 ```
 ```
 j. Check Datamodel
